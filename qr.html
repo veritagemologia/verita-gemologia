@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Leitor de QR Code - Verità</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; }
+    #reader { width: 100%; max-width: 400px; }
+    .box { margin-top: 16px; padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h2>Leitor de QR Code</h2>
+  <div id="reader"></div>
+  <div class="box" id="resultado">Aguardando leitura...</div>
+
+  <script>
+    const itens = {
+      "ITEM123": "Relatório Gemológico – Diamante",
+      "ITEM456": "Relatório Gemológico – Safira"
+    };
+
+    function onScanSuccess(decodedText) {
+      document.getElementById("resultado").innerText =
+        itens[decodedText] || "Item não encontrado";
+    }
+
+    const html5QrCode = new Html5Qrcode("reader");
+    html5QrCode.start(
+      { facingMode: "environment" },
+      { fps: 10, qrbox: 250 },
+      onScanSuccess
+    );
+  </script>
+</body>
+</html>
