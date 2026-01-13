@@ -3,15 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <title>Verità Laboratório Gemológico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* Fonte Boowie (arquivo local) */
+    @font-face {
+      font-family: 'Boowie';
+      src: url('fonts/Boowie.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #D4D4D4;
+      color: #14273B;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
+    h1 {
+      font-family: 'Boowie', serif;
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .linha {
+      width: 70px;
+      height: 3px;
+      background: #14273B;
+      margin-bottom: 28px;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 6px 0;
+    }
+
+    .botao {
+      display: inline-block;
+      margin-top: 36px;
+      padding: 14px 32px;
+      border: 1px solid #14273B;
+      color: #14273B;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+
+    .botao:hover {
+      background: #14273B;
+      color: #D4D4D4;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 60px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Verità Laboratório Gemológico</h1>
+  <div class="container">
+    <h1>Verità Laboratório Gemológico</h1>
+    <div class="linha"></div>
 
-  <p>📞 Telefone: (27) 99902-7726</p>
-  <p>📧 Email: veritagemologia@gmail.com</p>
+    <p>📞 (27) 99902-7726</p>
+    <p>📧 veritagemologia@gmail.com</p>
 
-  <a href="qr.html">📷 Ler QR Code</a>
+    <a class="botao" href="qr.html">Acesse o seu certificado pelo QR Code</a>
+  </div>
+
+  <footer>
+    © Verità Laboratório Gemológico
+  </footer>
 
 </body>
 </html>
