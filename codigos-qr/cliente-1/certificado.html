@@ -6,29 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       background: #ffffff;
     }
 
     img {
       width: 100%;
-      height: auto;
       display: block;
     }
   </style>
 </head>
+
 <body>
 
-  <img src="pagina1.png">
-  <img src="pagina2.png">
-  <img src="pagina3.png">
-  <img src="pagina4.png">
+<script>
+  const senhaCorreta = "1615"; // <<< MUDE AQUI A SENHA
+
+  const senha = prompt("Digite a senha para acessar o certificado:");
+
+  if (senha !== senhaCorreta) {
+    document.body.innerHTML = "";
+    alert("Senha incorreta.");
+  } else {
+    document.body.innerHTML = `
+      <img src="pagina1.png">
+      <img src="pagina2.png">
+      <img src="pagina3.png">
+      <img src="pagina4.png">
+    `;
+  }
+</script>
 
 </body>
 </html>
