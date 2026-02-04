@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background: #ffffff;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+<script>
+  const senhaCorreta = "1615"; // <<< MUDE AQUI A SENHA
+
+  const senha = prompt("Digite a senha para acessar o certificado:");
+
+  if (senha !== senhaCorreta) {
+    document.body.innerHTML = "";
+    alert("Senha incorreta.");
+  } else {
+    document.body.innerHTML = `
+      <img src="pagina1.png">
+      <img src="pagina2.png">
+      <img src="pagina3.png">
+      <img src="pagina4.png">
+    `;
+  }
+</script>
+
+</body>
+</html>
